@@ -115,7 +115,54 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initSmoothScroll();
     updateToolCount();
+    initActivityModal();
 });
+
+// ===== Modal Logic =====
+function initActivityModal() {
+    const modal = document.getElementById('activityModal');
+    if (!modal) return;
+
+    // Close on overlay click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+}
+
+function openActivityModal(event, templateId) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    const modal = document.getElementById('activityModal');
+    const modalBody = document.getElementById('modalBody');
+    const template = document.getElementById(templateId);
+
+    if (!modal || !modalBody || !template) return;
+
+    // Inject template content
+    modalBody.innerHTML = '';
+    const content = template.content.cloneNode(true);
+    modalBody.appendChild(content);
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+}
+
+function closeModal() {
+    const modal = document.getElementById('activityModal');
+    if (!modal) return;
+
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+}
 
 // ===== Copy Custom Instruction =====
 function copyInstruction(event) {

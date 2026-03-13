@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="AI Training Programme for Crescent Model Higher Secondary School Girls Campus - Empowering leadership and teachers with AI.">
-    <title>AI Training Programme | Crescent School Girls Campus</title>
+        content="AI Training Session for Crescent Model Higher Secondary School Girls Campus - Empowering leadership and teachers with AI.">
+    <title>AI Training Session | Crescent School Girls Campus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,7 +23,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <span class="logo-text">AI Training Programme</span>
+                <span class="logo-text">AI Training Session</span>
             </a>
             <div class="nav-links">
                 <a href="#tools" class="nav-link">AI Tools</a>
@@ -44,7 +44,7 @@
                 <h1 class="hero-title">
                     Empowering Future with
                     <br>
-                    <span class="gradient-text">AI Training Programme</span>
+                    <span class="gradient-text">AI Training Session</span>
                 </h1>
                 <p class="hero-subtitle">
                     A specialized training intensive designed to equip the leadership and educators of Crescent School
@@ -145,9 +145,15 @@
                         <h3 class="tool-name">Qwen AI</h3>
                         <p class="tool-desc">Alibaba's powerful conversational AI, excellent for coding, language tasks,
                             image generation, and video generation.</p>
-                        <span class="tool-tag">Image Generation</span>
-                        <span class="tool-tag">Video Generation</span>
-                        <span class="tool-tag">Image Editing</span>
+                        <div class="tool-tags-grid">
+                            <span class="tool-tag">Image Generation</span>
+                            <span class="tool-tag">Video Generation</span>
+                            <span class="tool-tag">Image Editing</span>
+                        </div>
+                        <button class="activity-btn" onclick="openActivityModal(event, 'qwen-activity')">
+                            <span class="activity-btn-icon">✨</span>
+                            <span>Guided Activity</span>
+                        </button>
                     </div>
                 </a>
 
@@ -165,9 +171,15 @@
                         <h3 class="tool-name">Kimi AI</h3>
                         <p class="tool-desc">A smart AI assistant capable of digesting massive documents, performing real-time 
                             web searches, and generating presentation slides.</p>
-                        <span class="tool-tag">Research & Docs</span>
-                        <span class="tool-tag">Web Search</span>
-                        <span class="tool-tag">Slide Generation</span>
+                        <div class="tool-tags-grid">
+                            <span class="tool-tag">Research & Docs</span>
+                            <span class="tool-tag">Web Search</span>
+                            <span class="tool-tag">Slide Generation</span>
+                        </div>
+                        <button class="activity-btn" onclick="openActivityModal(event, 'kimi-activity')">
+                            <span class="activity-btn-icon">📋</span>
+                            <span>Guided Activity</span>
+                        </button>
                     </div>
                 </a>
 
@@ -328,9 +340,9 @@
     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="about-content">
-            <h2 class="section-title">About the Programme</h2>
+            <h2 class="section-title">About the Session</h2>
             <p class="about-desc">
-                This AI Training Programme is a curated initiative specifically for the Girls Campus of Crescent Model
+                This AI Training Session is a curated initiative specifically for the Girls Campus of Crescent Model
                 Higher Secondary School.
                 Our mission is to bridge the gap between traditional education and the AI-powered future, ensuring our
                 leaders are ready for the challenges of tomorrow.
@@ -345,6 +357,96 @@
                 Initiative.</p>
         </div>
     </footer>
+
+    <!-- Modals for Activities -->
+    <div id="activityModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modalBody">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Template for Qwen Activity -->
+    <template id="qwen-activity">
+        <div class="activity-header">
+            <div class="activity-icon-badge">✨</div>
+            <h2 class="activity-title">Exhibition Launch: From Concept to Cinema</h2>
+            <p class="activity-subtitle">Learn to use Qwen's multimodal powers to create a complete exhibition campaign in minutes.</p>
+        </div>
+
+        <div class="activity-steps">
+            <div class="activity-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Design the Invitation</h3>
+                    <p>Think of a unique theme for your event and describe it to Qwen. Aim for a professional, vibrant, and high-quality look that captures the primary message of your exhibition.</p>
+                </div>
+            </div>
+
+            <div class="activity-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Refine & Edit</h3>
+                    <p>Upload your generated image back to Qwen and give it specific instructions to personalize the design. This is your chance to add school names, change color schemes, or refine specific visual details.</p>
+                </div>
+            </div>
+
+            <div class="activity-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Bring it to Life (Video)</h3>
+                    <p>Finally, turn your static image into a cinematic motion teaser. Experiment with different movement styles, camera zooms, or atmospheric effects to make your invitation truly dynamic.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-footer">
+            <p>Ready to try? Head over to Qwen AI and start creating!</p>
+            <a href="https://qwen.ai/" target="_blank" class="activity-cta">Start Activity on Qwen</a>
+        </div>
+    </template>
+
+    <!-- Template for Kimi Activity -->
+    <template id="kimi-activity">
+        <div class="activity-header">
+            <div class="activity-icon-badge">📋</div>
+            <h2 class="activity-title">Instant Presentations: From Draft to Slides</h2>
+            <p class="activity-subtitle">Learn how to combine different AI tools to create professional presentation slides in seconds.</p>
+        </div>
+
+        <div class="activity-steps">
+            <div class="activity-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Generate Content</h3>
+                    <p>Start by using a language model like ChatGPT or Gemini to generate a structured outline or detailed content for your lesson topic. Ask it to provide clear headings and bullet points for 5-8 slides.</p>
+                </div>
+            </div>
+
+            <div class="activity-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Import to Kimi</h3>
+                    <p>Copy the content generated in the previous step and paste it into Kimi AI. You can also upload a document if you already have one prepared.</p>
+                </div>
+            </div>
+
+            <div class="activity-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Generate Slides</h3>
+                    <p>Tell Kimi to transform the provided information into a presentation. Kimi will automatically organize the content into a professional slide deck layout for you to review and download.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity-footer">
+            <p>Ready to build your deck? Start by generating your content first!</p>
+            <a href="https://kimi.moonshot.cn/" target="_blank" class="activity-cta">Open Kimi AI</a>
+        </div>
+    </template>
 
     <script src="script.js"></script>
 </body>

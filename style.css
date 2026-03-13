@@ -592,7 +592,39 @@ body {
     margin-bottom: 20px;
 }
 
-.tool-tag {
+.tool-tags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.activity-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(139, 92, 246, 0.08);
+    border: 1.5px dashed var(--accent-purple);
+    border-radius: 12px;
+    color: var(--accent-purple);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.activity-btn:hover {
+    background: var(--accent-purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.25);
+}
+
+.activity-btn-icon {
+    font-size: 1.1rem;
+}.tool-tag {
     display: inline-block;
     padding: 4px 14px;
     background: linear-gradient(135deg, #6600FF15, #0066FF15);
@@ -777,39 +809,180 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero-leadership-block {
-        margin: 20px 0;
-        text-align: left;
+    .modal-content {
+        width: 95%;
+        padding: 30px 20px;
     }
 
-    .nav-links {
-        display: none;
+    .prompt-box {
+        padding: 12px;
     }
+}
 
-    .hero {
-        text-align: center;
-        justify-content: center;
-        padding-top: 100px;
-    }
+/* ===== Activity Modal System ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 26, 0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
 
-    .hero-container {
-        flex-direction: column-reverse;
-        gap: 40px;
-    }
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
 
-    .hero-content {
-        max-width: 100%;
-    }
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 30px;
+    position: relative;
+    padding: 50px;
+    overflow-y: auto;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
 
-    .hero-gif {
-        max-width: 300px;
-    }
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+}
 
-    .hero-title {
-        font-size: 2.8rem;
-    }
+.modal-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #f3f0ff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--accent-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
 
-    .hero-cube {
-        display: none;
-    }
+.modal-close:hover {
+    background: var(--accent-purple);
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Modal Activity Content Styling */
+.activity-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.activity-icon-badge {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-accent);
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+.activity-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    color: #0A0A1A;
+    margin-bottom: 10px;
+}
+
+.activity-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.activity-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.activity-step {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    background: #f9f8ff;
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.step-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: rgba(139, 92, 246, 0.3);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.step-content h3 {
+    font-size: 1.25rem;
+    color: #0A0A1A;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #4C4F7A;
+    margin-bottom: 15px;
+}
+
+.prompt-box {
+    background: #111;
+    color: #00FF66;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    position: relative;
+    border-left: 4px solid var(--accent-purple);
+}
+
+.activity-footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #EEE;
+}
+
+.activity-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 18px 40px;
+    background: var(--gradient-accent);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s;
+}
+
+.activity-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.4);
 }
