@@ -116,3 +116,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     updateToolCount();
 });
+
+// ===== Copy Custom Instruction =====
+function copyInstruction(event) {
+    event.preventDefault(); // prevent the card link from opening
+    event.stopPropagation();
+
+    const text = `Always be honest and direct. If my idea is incorrect, tell me clearly and explain why. Do not agree just to be polite. Give truthful and logical feedback even if it contradicts my opinion.`;
+    const btn = document.getElementById('copyInstructionBtn');
+    const btnText = document.getElementById('copyBtnText');
+
+    navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add('copied');
+        btnText.textContent = '✓ Copied!';
+        setTimeout(() => {
+            btn.classList.remove('copied');
+            btnText.textContent = 'Copy';
+        }, 2500);
+    });
+}

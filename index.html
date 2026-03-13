@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Workshop - Your gateway to the best AI tools and resources.">
-    <title>AI Workshop | Educational AI Hub</title>
+    <meta name="description"
+        content="AI Training Programme for Crescent Model Higher Secondary School Girls Campus - Empowering leadership and teachers with AI.">
+    <title>AI Training Programme | Crescent School Girls Campus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=2.7">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <span class="logo-text">AI Workshop</span>
+                <span class="logo-text">AI Training Programme</span>
             </a>
             <div class="nav-links">
                 <a href="#tools" class="nav-link">AI Tools</a>
@@ -33,21 +34,59 @@
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
+        <!-- Floating School Icons -->
+        <div class="school-floaties" aria-hidden="true">
+            <span class="floaty"
+                style="left:5%;  animation-duration:8s;  animation-delay:-2s;  font-size:1.8rem;">📚</span>
+            <span class="floaty"
+                style="left:12%; animation-duration:11s; animation-delay:-5s;  font-size:1.4rem;">✏️</span>
+            <span class="floaty"
+                style="left:20%; animation-duration:7s;  animation-delay:-1s;  font-size:1.5rem;">🍎</span>
+            <span class="floaty"
+                style="left:30%; animation-duration:9s;  animation-delay:-7s;  font-size:1.3rem;">⭐</span>
+            <span class="floaty"
+                style="left:42%; animation-duration:12s; animation-delay:-3s;  font-size:1.6rem;">🎓</span>
+            <span class="floaty"
+                style="left:55%; animation-duration:8s;  animation-delay:-6s;  font-size:1.4rem;">💡</span>
+            <span class="floaty"
+                style="left:65%; animation-duration:10s; animation-delay:-1s;  font-size:1.5rem;">📖</span>
+            <span class="floaty"
+                style="left:75%; animation-duration:9s;  animation-delay:-4s;  font-size:1.3rem;">🖊️</span>
+            <span class="floaty"
+                style="left:85%; animation-duration:11s; animation-delay:-8s;  font-size:1.7rem;">🌟</span>
+            <span class="floaty"
+                style="left:92%; animation-duration:7s;  animation-delay:-2s;  font-size:1.4rem;">📝</span>
+            <span class="floaty"
+                style="left:8%;  animation-duration:13s; animation-delay:-9s;  font-size:1.2rem;">🔬</span>
+            <span class="floaty"
+                style="left:48%; animation-duration:9s;  animation-delay:-5s;  font-size:1.5rem;">🧠</span>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    <span>Your AI Resource Hub</span>
+                    <span>Crescent Model Higher Secondary School Girls Campus</span>
                 </div>
                 <h1 class="hero-title">
-                    Explore the World of
+                    Empowering Future with
                     <br>
-                    <span class="gradient-text">Artificial Intelligence</span>
+                    <span class="gradient-text">AI Training Programme</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Discover the most powerful AI platforms and tools for educators—all in one place.
-                    Start exploring, learning, and creating with AI today.
+                    A specialized training intensive designed to equip the leadership and educators of Crescent School
+                    with cutting-edge AI competencies.
                 </p>
+
+                <!-- Integrated Leadership Insight -->
+                <div class="hero-leadership-block">
+                    <div class="h-leadership-icon">💡</div>
+                    <div class="h-leadership-text">
+                        <span class="h-leadership-tag">Head's Vision</span>
+                        <p class="h-leadership-quote">"The best way to predict the future is to create it. We are
+                            building the future of education, today."</p>
+                    </div>
+                </div>
+
                 <div class="hero-actions">
                     <a href="#tools" class="hero-cta">
                         <span>Explore AI Tools</span>
@@ -72,8 +111,8 @@
     <section class="tools-section" id="tools">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-tag">AI Tools</span>
-                <h2 class="section-title">Essential AI Platforms</h2>
+                <span class="section-tag">Toolkit</span>
+                <h2 class="section-title">Strategic AI Resources</h2>
             </div>
 
             <div class="tools-grid" id="toolsGrid">
@@ -91,6 +130,31 @@
                         <p class="tool-desc">The industry-leading conversational AI for lesson planning, brainstorming,
                             and writing assistance.</p>
                         <span class="tool-tag">Language AI</span>
+
+                        <div class="pro-tip">
+                            <div class="pro-tip-header">
+                                <span class="pro-tip-icon">⚙️</span>
+                                <span class="pro-tip-label">Pro Tip — Custom Instructions</span>
+                            </div>
+                            <p class="pro-tip-text">Go to <strong>Settings → Custom Instructions</strong> and add this
+                                under <em>"How would you like ChatGPT to respond?"</em></p>
+                            <div class="pro-tip-quote-wrap">
+                                <blockquote class="pro-tip-quote" id="customInstructionText">
+                                    "Always be honest and direct. If my idea is incorrect, tell me clearly and explain
+                                    why. Do not agree just to be polite. Give truthful and logical feedback even if it
+                                    contradicts my opinion."
+                                </blockquote>
+                                <button class="copy-btn" id="copyInstructionBtn" onclick="copyInstruction(event)"
+                                    title="Copy to clipboard">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" />
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                    </svg>
+                                    <span id="copyBtnText">Copy</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </a>
 
@@ -98,14 +162,18 @@
                 <a href="https://qwen.ai/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #6366f1;">
                         <!-- Generic AI/Brain icon for Qwen -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">Qwen AI</h3>
-                        <p class="tool-desc">Alibaba's powerful conversational AI, excellent for coding, language tasks, and visual understanding.</p>
-                        <span class="tool-tag">Language AI</span>
+                        <p class="tool-desc">Alibaba's powerful conversational AI, excellent for coding, language tasks, 
+                            image generation, and video generation.</p>
+                        <span class="tool-tag">Image Generation</span>
+                        <span class="tool-tag">Video Generation</span>
+                        <span class="tool-tag">Image Editing</span>
                     </div>
                 </a>
 
@@ -113,14 +181,16 @@
                 <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #ec4899;">
                         <!-- Book/Research icon for Kimi -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">Kimi AI</h3>
-                        <p class="tool-desc">A smart AI assistant capable of digesting massive documents and extremely long research papers.</p>
+                        <p class="tool-desc">A smart AI assistant capable of digesting massive documents and extremely
+                            long research papers.</p>
                         <span class="tool-tag">Research & Docs</span>
                     </div>
                 </a>
@@ -129,7 +199,8 @@
                 <a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #3b82f6;">
                         <!-- Note/Brain icon for NotebookLM -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
                             <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -139,7 +210,8 @@
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">NotebookLM</h3>
-                        <p class="tool-desc">Google's personalized AI researcher. Upload resources and interact with them, or generate audio discussions.</p>
+                        <p class="tool-desc">Google's personalized AI researcher. Upload resources and interact with
+                            them, or generate audio discussions.</p>
                         <span class="tool-tag">Learning</span>
                     </div>
                 </a>
@@ -148,7 +220,8 @@
                 <a href="https://otter.ai/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #0c8ce9;">
                         <!-- Microphone/Audio icon for Otter -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
                             <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                             <line x1="12" y1="19" x2="12" y2="22"></line>
@@ -156,7 +229,8 @@
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">Otter.ai</h3>
-                        <p class="tool-desc">An AI meeting assistant that records audio, writes notes, captures slides, and generates summaries.</p>
+                        <p class="tool-desc">An AI meeting assistant that records audio, writes notes, captures slides,
+                            and generates summaries.</p>
                         <span class="tool-tag">Audio & Notes</span>
                     </div>
                 </a>
@@ -165,14 +239,16 @@
                 <a href="https://gptzero.me/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #6b7280;">
                         <!-- Shield/Check icon for GPTZero (Plagiarism/AI Detection) -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             <path d="m9 12 2 2 4-4"></path>
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">GPTZero</h3>
-                        <p class="tool-desc">The leading AI detector for educators to check if text was written by a human or an AI model.</p>
+                        <p class="tool-desc">The leading AI detector for educators to check if text was written by a
+                            human or an AI model.</p>
                         <span class="tool-tag">AI Detection</span>
                     </div>
                 </a>
@@ -181,14 +257,16 @@
                 <a href="https://stealthwriter.ai/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #10b981;">
                         <!-- Ghost/Magic wand style icon for stealth writing -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2v20"></path>
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">StealthWriter</h3>
-                        <p class="tool-desc">An advanced AI text humanizer that rewrites AI-generated content to sound completely human and bypass AI detectors.</p>
+                        <p class="tool-desc">An advanced AI text humanizer that rewrites AI-generated content to sound
+                            completely human and bypass AI detectors.</p>
                         <span class="tool-tag">AI Humanizer</span>
                     </div>
                 </a>
@@ -197,14 +275,16 @@
                 <a href="https://www.napkin.ai/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #f59e0b;">
                         <!-- Sketch/Diagram icon for Napkin -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">Napkin AI</h3>
-                        <p class="tool-desc">Turn text into diagrams instantly. A powerful tool for teachers to create visual aids, mind maps, and charts.</p>
+                        <p class="tool-desc">Turn text into diagrams instantly. A powerful tool for teachers to create
+                            visual aids, mind maps, and charts.</p>
                         <span class="tool-tag">Visuals & Diagrams</span>
                     </div>
                 </a>
@@ -213,14 +293,16 @@
                 <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #4285F4;">
                         <!-- Code/Development icon for AI Studio -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="16 18 22 12 16 6"></polyline>
                             <polyline points="8 6 2 12 8 18"></polyline>
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">Google AI Studio</h3>
-                        <p class="tool-desc">Google's fast and lightweight IDE for building with the powerful Gemini models. Excellent for creating custom prompts and AI tools.</p>
+                        <p class="tool-desc">Google's fast and lightweight IDE for building with the powerful Gemini
+                            models. Excellent for creating custom prompts and AI tools.</p>
                         <span class="tool-tag">AI Development</span>
                     </div>
                 </a>
@@ -229,14 +311,16 @@
                 <a href="https://protonvpn.com/free-vpn" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #6d28d9;">
                         <!-- Shield/Lock icon for VPN -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                         </svg>
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">ProtonVPN (Free)</h3>
-                        <p class="tool-desc">A highly secure and completely free VPN for your laptop with unlimited data to access geo-restricted AI tools.</p>
+                        <p class="tool-desc">A highly secure and completely free VPN for your laptop with unlimited data
+                            to access geo-restricted AI tools.</p>
                         <span class="tool-tag">Privacy & Access</span>
                     </div>
                 </a>
@@ -245,7 +329,8 @@
                 <a href="https://anydesk.com/" target="_blank" rel="noopener noreferrer" class="tool-card">
                     <div class="tool-icon" style="color: #EF4444;">
                         <!-- Monitor/Share icon for Remote Desktop -->
-                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" fill="none" width="32" height="32" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                             <line x1="8" y1="21" x2="16" y2="21"></line>
                             <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -253,7 +338,8 @@
                     </div>
                     <div class="tool-info">
                         <h3 class="tool-name">AnyDesk</h3>
-                        <p class="tool-desc">A fast and secure remote desktop application. Perfect for remote teaching, IT support, and accessing your school computer from home.</p>
+                        <p class="tool-desc">A fast and secure remote desktop application. Perfect for remote teaching,
+                            IT support, and accessing your school computer from home.</p>
                         <span class="tool-tag">Remote Desktop</span>
                     </div>
                 </a>
@@ -266,11 +352,12 @@
     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="about-content">
-            <h2 class="section-title">What is AI Workshop?</h2>
+            <h2 class="section-title">About the Programme</h2>
             <p class="about-desc">
-                AI Workshop is a curated gateway designed for school teachers and administrators.
-                We bring together the best AI tools to help you discover, explore, and harness the power of artificial
-                intelligence in education.
+                This AI Training Programme is a curated initiative specifically for the Girls Campus of Crescent Model
+                Higher Secondary School.
+                Our mission is to bridge the gap between traditional education and the AI-powered future, ensuring our
+                leaders are ready for the challenges of tomorrow.
             </p>
         </div>
     </section>
@@ -278,7 +365,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <p class="footer-text">&copy; 2026 AI Workshop for Educators. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Crescent Model Higher Secondary School (Girls Campus). AI Training
+                Initiative.</p>
         </div>
     </footer>
 
