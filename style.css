@@ -980,9 +980,10 @@ body {
 .logo-box {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     background: #f9f8ff;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
 }
 
@@ -998,6 +999,7 @@ body {
 
 .logo-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
