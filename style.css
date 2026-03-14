@@ -809,6 +809,76 @@ body {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+        padding-top: 100px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-badge {
+        margin-bottom: 20px;
+        padding: 8px 16px;
+        line-height: 1.4;
+        text-align: left;
+        width: fit-content;
+    }
+
+    .badge-dot {
+        flex-shrink: 0;
+        margin-top: 4px;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .hero-leadership-block {
+        margin: 25px 0;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .h-leadership-icon {
+        flex-shrink: 0;
+    }
+
+    .hero-visual {
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero-school-logo {
+        max-width: 150px;
+    }
+
+    .hero-gif {
+        max-width: 280px;
+    }
+
     .modal-content {
         width: 95%;
         padding: 30px 20px;
