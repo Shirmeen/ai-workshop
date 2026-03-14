@@ -47,8 +47,7 @@
                     <span class="gradient-text">AI Training Session</span>
                 </h1>
                 <p class="hero-subtitle">
-                    A specialized training intensive designed to equip the leadership and educators of Crescent School
-                    with cutting-edge AI competencies.
+                    Empowering the educators and leadership of Crescent School with highly practical, hands-on Artificial Intelligence skills for the modern classroom.
                 </p>
 
                 <!-- Integrated Leadership Insight -->
@@ -381,23 +380,40 @@
                 <div class="step-number">01</div>
                 <div class="step-content">
                     <h3>Design the Invitation</h3>
-                    <p>Think of a unique theme for your event and describe it to Qwen. Aim for a professional, vibrant, and high-quality look that captures the primary message of your exhibition.</p>
+                    <p>Tell Qwen to create an image for an exhibition invitation. Think of a unique theme (like futuristic, abstract, or minimalist) and ask for a professional, high-quality design.</p>
                 </div>
             </div>
 
             <div class="activity-step">
                 <div class="step-number">02</div>
                 <div class="step-content">
-                    <h3>Refine & Edit</h3>
-                    <p>Upload your generated image back to Qwen and give it specific instructions to personalize the design. This is your chance to add school names, change color schemes, or refine specific visual details.</p>
+                    <h3>Add the Crescent Logo</h3>
+                    <p>Upload the generated invitation image back into Qwen, along with the Crescent logo provided below. Ask Qwen to edit the image by placing the logo elegantly on the invitation.</p>
+                    
+                    <div class="activity-assets">
+                        <p class="asset-label">Crescent School Logo:</p>
+                        <div class="logo-box">
+                            <img src="crescent_logo.png" alt="Crescent Logo" id="crescentLogoAsset">
+                            <div class="logo-actions">
+                                <a href="crescent_logo.png" download class="copy-btn">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    Download Logo
+                                </a>
+                                <button class="copy-btn" id="copyLogoBtn" onclick="copyLogoToClipboard(event, 'crescent_logo.png')">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    <span id="copyLogoText">Copy Logo</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="activity-step">
                 <div class="step-number">03</div>
                 <div class="step-content">
-                    <h3>Bring it to Life (Video)</h3>
-                    <p>Finally, turn your static image into a cinematic motion teaser. Experiment with different movement styles, camera zooms, or atmospheric effects to make your invitation truly dynamic.</p>
+                    <h3>Create the Video Teaser</h3>
+                    <p>Once you are happy with the edited invitation that includes the logo, ask Qwen to generate a cinematic, short motion video using that final image to create excitement for the exhibition!</p>
                 </div>
             </div>
         </div>

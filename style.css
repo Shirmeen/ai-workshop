@@ -962,6 +962,49 @@ body {
     border-left: 4px solid var(--accent-purple);
 }
 
+.activity-assets {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px dashed rgba(139, 92, 246, 0.4);
+}
+
+.asset-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f9f8ff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.logo-box img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #EEE;
+}
+
+.logo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.logo-actions .copy-btn {
+    text-decoration: none;
+}
+
 .activity-footer {
     text-align: center;
     padding-top: 30px;

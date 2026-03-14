@@ -164,21 +164,36 @@ function closeModal() {
     document.body.style.overflow = ''; // Restore scroll
 }
 
-// ===== Copy Custom Instruction =====
-function copyInstruction(event) {
-    event.preventDefault(); // prevent the card link from opening
+// ===== Copy Logo to Clipboard =====
+async function copyLogoToClipboard(event, imageUrl) {
+    event.preventDefault();
     event.stopPropagation();
 
-    const text = `Always be honest and direct. If my idea is incorrect, tell me clearly and explain why. Do not agree just to be polite. Give truthful and logical feedback even if it contradicts my opinion.`;
-    const btn = document.getElementById('copyInstructionBtn');
-    const btnText = document.getElementById('copyBtnText');
+    const btn = event.currentTarget;
+    const btnText = btn.querySelector('#copyLogoText');
+    const originalText = btnText.textContent;
 
-    navigator.clipboard.writeText(text).then(() => {
+    try {
+        const response = await fetch(imageUrl);
+        const blob = await response.blob();
+        await navigator.clipboard.write([
+            new ClipboardItem({
+                [blob.type]: blob
+            })
+        ]);
+
         btn.classList.add('copied');
         btnText.textContent = '✓ Copied!';
+
         setTimeout(() => {
             btn.classList.remove('copied');
-            btnText.textContent = 'Copy';
+            btnText.textContent = originalText;
         }, 2500);
-    });
+    } catch (err) {
+        console.error('Failed to copy image: ', err);
+        btnText.textContent = 'Failed linking';
+        setTimeout(() => {
+            btnText.textContent = originalText;
+        }, 2500);
+    }
 }
